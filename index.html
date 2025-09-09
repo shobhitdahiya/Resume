@@ -12,33 +12,31 @@
     text-align: center;
     padding: 50px 0;
   }
-  .about-section h2 {  <!-- ...existing code... -->
-  <img src="images/about/1.jpg" alt="About Me">
-  <!-- ...existing code... -->
+  .about-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
   .about-section img {
-    width: 200px; /* Adjust the size as needed */
+    width: 200px;
     height: 200px;
-    border-radius: 50%; /* Makes the image round */
+    border-radius: 50%;
     margin-bottom: 20px;
   }
   .about-section p {
     color: #333;
   }
 
-  /* Additional CSS for Projects Section */
+  /* Projects Section */
 .projects-section h2 {
   margin-bottom: 40px;
   font-size: 2.5rem;
 }
 .card {
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 .card-img-top {
-  max-height: 180px; /* Adjust this value to fit the image properly in the card */
-  object-fit: cover; /* This makes sure the image covers the area properly */
+  max-height: 180px;
+  object-fit: cover;
 }
 .card-body {
   padding: 15px;
@@ -50,7 +48,7 @@
   margin-bottom: 15px;
 }
 
-/* Additional CSS for Skills Section */
+/* Skills Section */
 .skills-section h2 {
   margin-bottom: 40px;
   font-size: 2.5rem;
@@ -59,10 +57,10 @@
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 .skills-section .card-img-top {
-  padding: 20px; /* Add padding around your images if needed */
-  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
-  height: 180px; /* Fixed height for consistency */
-  object-fit: contain; /* This will make sure the image is scaled properly within the container */
+  padding: 20px;
+  background-color: #f8f9fa;
+  height: 180px;
+  object-fit: contain;
 }
 .skills-section .card-body {
   padding: 15px;
@@ -81,7 +79,7 @@
   border-color: #007bff;
 }
 
-/* Additional CSS for Contact Section */
+/* Contact Section */
 .contact-section {
   padding: 50px 0;
 }
@@ -94,58 +92,44 @@
   margin-bottom: 20px;
 }
 .social-icon {
-  width: 50px; /* Size of your icons */
+  width: 50px;
   margin-bottom: 10px;
 }
-/* Hover effect for icons */
 .social-icon:hover {
   opacity: 0.7;
 }
-/* Style for links in the Contact section */
 .contact-section a {
   color: #fff;
-  text-decoration: none; /* Removes underline from links */
-  display: inline-block; /* Allows for margin on the bottom */
+  text-decoration: none;
+  display: inline-block;
   margin-bottom: 10px;
 }
 .contact-section a:hover {
-  color: #ddd; /* Color when hovering over the link */
+  color: #ddd;
 }
 
-/* CSS for Sticky Navbar */
+/* Navbar */
 .navbar {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-
-/* Ensure padding is added to body to avoid content being hidden behind the navbar */
 body { 
-  padding-top: 56px; /* Adjust this value based on the height of your navbar */
+  padding-top: 56px;
 }
-
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
-
-/* Style for navigation bar links */
 .navbar-nav .nav-link {
   color: white;
 }
-
 .navbar-nav .nav-link:hover {
-  color: #f8f9fa; /* Slightly lighter white when hovering over links */
+  color: #f8f9fa;
 }
-
-/* Media query for responsive navbar collapsing */
 @media (max-width: 992px) {
   .navbar-collapse {
-    background-color: #343a40; /* Same as navbar color for seamless look */
+    background-color: #343a40;
   }
 }
-
-
 </style>
-
 </head>
 <body>
 
@@ -177,7 +161,7 @@ Currently, I’m expanding my skills in machine learning and statistics, while s
           <img src="images/heart.jpeg" class="card-img-top" alt="Project 1">
           <div class="card-body">
             <h5 class="card-title">Heart Stroke Risk Prediction</h5>
-            <p class="card-text"><p>Developed a machine learning model to predict the risk of heart stroke based on medical and lifestyle factors. Implemented data preprocessing, feature selection, and classification algorithms using Python and Scikit-learn.</p></p>
+            <p class="card-text">Developed a machine learning model to predict the risk of heart stroke based on medical and lifestyle factors. Implemented data preprocessing, feature selection, and classification algorithms using Python and Scikit-learn.</p>
             <a href="https://github.com/shobhitdahiya/heart_stroke_prediction" class="btn btn-secondary">Source Code</a>
           </div>
         </div>
@@ -269,54 +253,48 @@ Currently, I’m expanding my skills in machine learning and statistics, while s
   </div>
 </section>
 
-
-
 <!-- Skills Section -->
 <section id="skills" class="skills-section bg-white" id="skills">
   <div class="container">
     <h2 class="text-center">Skills</h2>
     <div class="row">
-      <!-- Skill 1 -->
+      <!-- Python -->
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card">
           <img src="images/skills/1.png" class="card-img-top" alt="Python">
           <div class="card-body">
             <h5 class="card-title">Python</h5>
-            <p class="card-text"><p>Strong in writing clean and efficient code. Experienced in Data Analysis, Automation, and Machine Learning. Libraries: NumPy, Pandas, Matplotlib, Scikit-learn.</p>
-            
+            <p class="card-text">Strong in writing clean and efficient code. Experienced in Data Analysis, Automation, and Machine Learning. Libraries: NumPy, Pandas, Matplotlib, Scikit-learn.</p>
           </div>
         </div>
       </div>
-      <!-- Skill 2 -->
+      <!-- Power BI -->
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card">
-          <img src="images/power bi.jpeg" class="card-img-top" alt="Data Visualization">
+          <img src="images/skills/powerbi.jpeg" class="card-img-top" alt="Power BI">
           <div class="card-body">
-            <h5 class="card-title">Power Bi</h5>
-            <p class="card-text"><p><p>Skilled in creating interactive dashboards and reports using Power BI. Able to transform raw data into meaningful business insights.</p></p>
-            
+            <h5 class="card-title">Power BI</h5>
+            <p class="card-text">Skilled in creating interactive dashboards and reports using Power BI. Able to transform raw data into meaningful business insights.</p>
           </div>
         </div>
       </div>
-      <!-- Skill 3 -->
+      <!-- SQL -->
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card">
           <img src="images/skills/3.png" class="card-img-top" alt="SQL">
           <div class="card-body">
             <h5 class="card-title">SQL</h5>
-            <p class="card-text"><p>Good knowledge of queries, joins, and optimization. Hands-on with MySQL, PostgreSQL. Strong in data cleaning and database design.</p>
-            
+            <p class="card-text">Good knowledge of queries, joins, and optimization. Hands-on with MySQL, PostgreSQL. Strong in data cleaning and database design.</p>
           </div>
         </div>
       </div>
-      <!-- Skill 4 -->
+      <!-- Machine Learning -->
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card">
-          <img src="images/machinee.jpg" class="card-img-top" alt="Data Storytelling">
+          <img src="images/machinelearning.jpg" class="card-img-top" alt="Machine Learning">
           <div class="card-body">
             <h5 class="card-title">Machine Learning</h5>
-            <p class="card-text"><p>Knowledge of basic Machine Learning algorithms like Regression, Classification, and Clustering. Hands-on with Python libraries such as Scikit-learn and Pandas for model building and evaluation.</p>
-            
+            <p class="card-text">Knowledge of basic Machine Learning algorithms like Regression, Classification, and Clustering. Hands-on with Python libraries such as Scikit-learn and Pandas for model building and evaluation.</p>
           </div>
         </div>
       </div>
@@ -324,12 +302,11 @@ Currently, I’m expanding my skills in machine learning and statistics, while s
   </div>
 </section>
 
-<!-- Contact Me Section -->
+<!-- Contact Section -->
 <section id="contact" class="contact-section text-center text-white bg-dark py-5">
   <div class="container">
     <h2 class="mb-4">Contact Me</h2>
     
-    <!-- Email & Phone -->
     <div class="row mb-4">
       <div class="col-lg-6 mb-3">
         <p><i class="fas fa-envelope"></i> 
@@ -343,7 +320,6 @@ Currently, I’m expanding my skills in machine learning and statistics, while s
       </div>
     </div>
 
-    <!-- Social Links -->
     <div class="row justify-content-center">
       <div class="col-lg-2 col-md-4 mb-4">
         <a href="https://www.linkedin.com/in/shobhitrajdahiya" target="_blank" class="d-block text-white">
@@ -351,7 +327,6 @@ Currently, I’m expanding my skills in machine learning and statistics, while s
           LinkedIn
         </a>
       </div>
-      
       <div class="col-lg-2 col-md-4 mb-4">
         <a href="https://github.com/shobhitdahiya" target="_blank" class="d-block text-white">
           <img src="icons/github.png" alt="GitHub" class="social-icon mb-2">
@@ -359,42 +334,28 @@ Currently, I’m expanding my skills in machine learning and statistics, while s
         </a>
       </div>
     </div>
-
   </div>
 </section>
 
-
-<!-- Sticky Navigation Bar -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#home">Portfolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-
-<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
