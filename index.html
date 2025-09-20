@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Section</title>
+<title>Portfolio - Shobhit Raj Dahiya</title>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <style>
   .about-section {
@@ -133,67 +135,121 @@ html {
 </head>
 <body>
 
+<!-- About Section -->
 <section id='about' class="about-section">
   <div class="container">
     <h2></h2>
     <img src="images/about/1.jpg" alt="About Me">
     <h3>Shobhit Raj Dahiya</h3>
-    <p>Hi, I’m Shobhit Raj Dahiya 
-A final-year B.Tech Electronics & Communication Engineering student with a passion for Data Science and Analytics.  
-
-Skilled in Python, Power BI, Excel, and SQL, I enjoy turning raw data into actionable insights. I’ve worked on real-world datasets, building dashboards, performing data cleaning, and developing predictive models.  
-
-Currently, I’m expanding my skills in machine learning and statistics, while staying eager to learn, collaborate, and solve real-world problems using data. 
-</p>
-    <p>Always eager to learn, collaborate, and solve real problems using data.</p>
+    <p>Hi, I’m Shobhit Raj Dahiya, a final-year B.Tech Electronics & Communication Engineering student with a strong passion for Data Science and Analytics.</p>
+    <p>I specialize in Python, Power BI, SQL, and Excel, and enjoy transforming raw data into meaningful business insights. My projects include building dashboards, developing predictive models, and deploying real-world machine learning applications.</p>
+    <p>Currently, I’m enhancing my expertise in AI and machine learning, while staying eager to learn, collaborate, and solve challenging real-world problems with data.</p>
+    
+   
+    </div>
   </div>
 </section>
 
 
 <!-- Projects Section -->
-<section id="projects" class="projects-section bg-light" id="projects">
+<section id="projects" class="projects-section bg-light">
   <div class="container">
     <h2 class="text-center">Projects</h2>
     <div class="row">
+
       <!-- Project 1 -->
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="images/heart.jpeg" class="card-img-top" alt="Project 1">
+          <img src="images/heart.jpeg" class="card-img-top" alt="Heart Stroke Prediction">
           <div class="card-body">
             <h5 class="card-title">Heart Stroke Risk Prediction</h5>
-            <p class="card-text">Developed a machine learning model to predict the risk of heart stroke based on medical and lifestyle factors. Implemented data preprocessing, feature selection, and classification algorithms using Python and Scikit-learn.</p>
+            <p class="card-text">
+              Developed a <strong>machine learning model</strong> to predict heart stroke risk using patient health & lifestyle data. 
+              Implemented preprocessing, feature engineering, and classification algorithms (Logistic Regression, Random Forest), 
+              achieving ~88% accuracy. Deployed as an interactive <strong>Streamlit web app</strong> for real-time predictions.
+            </p>
             <a href="https://github.com/shobhitdahiya/heart_stroke_prediction" class="btn btn-secondary">Source Code</a>
           </div>
         </div>
       </div>
+
       <!-- Project 2 -->
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+          <img src="images/projects/2.jpeg" class="card-img-top" alt="Credit Card Analysis Dashboard">
           <div class="card-body">
-            <h5 class="card-title">Project 2</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+            <h5 class="card-title">Credit Card Transaction & Financial Analysis</h5>
+            <p class="card-text">
+              Designed an <strong>interactive Power BI dashboard</strong> to analyze financial transactions, track KPIs, and monitor customer behavior. 
+              Performed <strong>data cleaning, modeling, and DAX calculations</strong> to uncover insights such as fraudulent spending patterns 
+              and regional sales trends, enabling strategic business recommendations.
+            </p>
+            <a href="https://github.com/shobhitdahiya/Credit-Card-Transaction-Financial-Analysis-Dashboard-Power-BI-" class="btn btn-secondary">Source Code</a>
           </div>
         </div>
       </div>
+
       <!-- Project 3 -->
       <div class="col-md-4 mb-4">
         <div class="card">
           <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
           <div class="card-body">
-            <h5 class="card-title">Project 3</h5>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.</p>
-            <a href="#" class="btn btn-primary">Blog Post</a>
-            <a href="#" class="btn btn-secondary">Source Code</a>
+            <h5 class="card-title">Machine Learning Experiments</h5>
+            <p class="card-text">
+              Conducted experiments with <strong>classification & clustering algorithms</strong> on real-world datasets. 
+              Explored model interpretability, feature importance, and optimization techniques to improve performance and 
+              scalability for AI-driven decision systems.
+            </p>
+            
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Experience Section -->
+<section id="experience" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-5">Experience</h2>
+    <div class="row">
+
+      <!-- IBM AI Intern -->
+      <div class="col-lg-6 col-md-12 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">AI Intern</h5>
+            <h6 class="card-subtitle mb-2 text-muted">IBM SkillsBuild • Jul 2025 – Aug 2025</h6>
+            <ul class="card-text text-left">
+              <li>Worked on <strong>end-to-end AI pipelines</strong>: raw data → preprocessing → feature engineering → model optimization → deployment.</li>
+              <li>Built and evaluated <strong>supervised ML models</strong> using Scikit-learn, improving prediction accuracy through hyperparameter tuning.</li>
+              <li>Enhanced skills in <strong>Python, data visualization, and ML best practices</strong> while solving industry-aligned use cases.</li>
+              <li>Applied AI solutions to practical business problems, focusing on <strong>model performance and interpretability</strong>.</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
 
+      <!-- EMERTXE Data Analyst Intern -->
+      <div class="col-lg-6 col-md-12 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Data Analyst Intern</h5>
+            <h6 class="card-subtitle mb-2 text-muted">EMERTXE • Jul 2024 – Aug 2024</h6>
+            <ul class="card-text text-left">
+              <li>Designed <strong>interactive dashboards & performance reports</strong> to support data-driven decision making.</li>
+              <li>Performed <strong>data cleaning, preprocessing, and visualization</strong> with Python (Pandas, NumPy, Matplotlib) and Power BI.</li>
+              <li>Tracked KPIs, identified business patterns, and presented insights that improved project efficiency.</li>
+              <li>Strengthened expertise in <strong>business analytics, reporting, and stakeholder communication</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
+
 
 <!-- Certifications Section -->
 <section id="certifications" class="py-5 bg-light">
@@ -252,55 +308,124 @@ Currently, I’m expanding my skills in machine learning and statistics, while s
     </div>
   </div>
 </section>
+<!-- Achievements Section -->
+<section id="achievements" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Achievements</h2>
+    <div class="row justify-content-center">
+      <!-- IBM Internship -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="images/achievements/ibm.png" alt="IBM Internship Certificate" class="card-img-top p-3" style="height:220px; object-fit:contain;">
+          <div class="card-body">
+            <h4 class="card-title">IBM AI Internship (2025)</h4>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ISRO NISAR -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="images/achievements/nidar.png" alt="ISRO NISAR Certificate" class="card-img-top p-3" style="height:220px; object-fit:contain;">
+          <div class="card-body">
+            <h4 class="card-title">ISRO – NISAR Workshop (2024)</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- ISRO LiDAR -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="images/achievements/lidar.png" alt="ISRO LiDAR Certificate" class="card-img-top p-3" style="height:220px; object-fit:contain;">
+          <div class="card-body">
+            <h4 class="card-title">ISRO – LiDAR Data Processing (2024)</h4>
+          </div>
+        </div>
+      </div>
+
+     
+      <!-- EMERTXE Internship -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="images/achievements/emertxe.png" alt="EMERTXE Internship Certificate" class="card-img-top p-3" style="height:220px; object-fit:contain;">
+          <div class="card-body">
+            <h4 class="card-title">EMERTXE Data Analyst Internship (2024)</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 <!-- Skills Section -->
-<section id="skills" class="skills-section bg-white" id="skills">
+<section id="skills" class="skills-section bg-white">
   <div class="container">
     <h2 class="text-center">Skills</h2>
     <div class="row">
+
       <!-- Python -->
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card">
           <img src="images/skills/1.png" class="card-img-top" alt="Python">
           <div class="card-body">
             <h5 class="card-title">Python</h5>
-            <p class="card-text">Strong in writing clean and efficient code. Experienced in Data Analysis, Automation, and Machine Learning. Libraries: NumPy, Pandas, Matplotlib, Scikit-learn.</p>
+            <p class="card-text">
+              Strong in writing clean, efficient code for <strong>data analysis, automation, and machine learning</strong>. 
+              Skilled in libraries like Pandas, NumPy, Matplotlib, Scikit-learn, and NLTK for end-to-end data workflows.
+            </p>
           </div>
         </div>
       </div>
+
       <!-- Power BI -->
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card">
-          <img src="images/power bi.jpeg" class="card-img-top" alt="Power BI">
+          <img src="images/skills/powerbi.jpeg" class="card-img-top" alt="Power BI">
           <div class="card-body">
             <h5 class="card-title">Power BI</h5>
-            <p class="card-text">Skilled in creating interactive dashboards and reports using Power BI. Able to transform raw data into meaningful business insights.</p>
+            <p class="card-text">
+              Experienced in building <strong>interactive dashboards & reports</strong> that turn raw data into meaningful business insights. 
+              Proficient in Power Query, DAX, and storytelling with data visualization.
+            </p>
           </div>
         </div>
       </div>
+
       <!-- SQL -->
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card">
           <img src="images/skills/3.png" class="card-img-top" alt="SQL">
           <div class="card-body">
             <h5 class="card-title">SQL</h5>
-            <p class="card-text">Good knowledge of queries, joins, and optimization. Hands-on with MySQL, PostgreSQL. Strong in data cleaning and database design.</p>
+            <p class="card-text">
+              Proficient in writing <strong>complex queries, joins, and optimizations</strong> for large-scale datasets. 
+              Hands-on with MySQL & PostgreSQL for database design, data cleaning, and reporting.
+            </p>
           </div>
         </div>
       </div>
+
       <!-- Machine Learning -->
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card">
-          <img src="images/machinee.jpg" class="card-img-top" alt="Machine Learning">
+          <img src="images/machinelearning.jpg" class="card-img-top" alt="Machine Learning">
           <div class="card-body">
             <h5 class="card-title">Machine Learning</h5>
-            <p class="card-text">Knowledge of basic Machine Learning algorithms like Regression, Classification, and Clustering. Hands-on with Python libraries such as Scikit-learn and Pandas for model building and evaluation.</p>
+            <p class="card-text">
+              Skilled in applying <strong>classification, regression, and clustering algorithms</strong> to solve real-world problems. 
+              Experienced with Scikit-learn, Pandas, and feature engineering techniques to build interpretable models.
+            </p>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section text-center text-white bg-dark py-5">
@@ -336,28 +461,37 @@ Currently, I’m expanding my skills in machine learning and statistics, while s
     </div>
   </div>
 </section>
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
+    <!-- Brand takes user to Home section -->
     <a class="navbar-brand" href="#home">Portfolio</a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <!-- Resume Button -->
+        <li class="nav-item">
+          <a class="btn btn-outline-light ml-lg-3" 
+             href="https://drive.google.com/file/d/1VEC9hsrdHVGdr6YFta_Hq6xh4m7K3cLW/view?usp=sharing" 
+             target="_blank">
+             <i class="fas fa-file-download"></i> Resume
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+
+
+```
