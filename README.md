@@ -4,7 +4,7 @@ This repository contains the source code of my **personal portfolio website**, b
 The website showcases my **resume, skills, projects, certifications, and contact details** in a clean and professional format.  
 
 ## 🌐 Live Website
-👉 [Visit My Portfolio](https://shobhitdahiya.github.io/Resume/)  
+👉 [Visit My Portfolio](file:///Users/shobhitdahiya/DS-Portfolio-Website-ChatGPT/index.html)  
 
 ## ✨ Features
 - Responsive design (works on desktop & mobile)  
