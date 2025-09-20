@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shobhit Raj Dahiya — Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
+  <style>
+    :root{
+      --bg:#0d0d0d;
+      --card:#0f0f0f;
+      --glass: rgba(255,255,255,0.06);
+      --muted:#bfbfbf;
+      --accent:#00e5ff;
+      --accent-2:#4dd0e1;
+      --white:#f5f5f5;
+      --radius:16px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    html,body{height:100%;background:var(--bg);color:var(--white);scroll-behavior:smooth;}
+    a{color:inherit;text-decoration:none;}
+
+    /* NAVBAR */
+    nav{
+      position:fixed;top:0;left:0;right:0;height:72px;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0 28px;gap:12px;
+      background:rgba(6,6,6,0.75);backdrop-filter:blur(10px);z-index:999;
+      border-bottom:1px solid rgba(255,255,255,0.02);
+    }
+    nav .brand{font-weight:800;font-size:1.2rem;letter-spacing:0.2px;}
+    nav .navlinks{display:flex;align-items:center;gap:14px;}
+    nav .navlinks a{font-weight:600;color:var(--white);padding:8px 10px;border-radius:10px;transition:color .18s,background .18s;}
+    nav .navlinks a:hover{color:var(--accent); background: rgba(255,255,255,0.02);}
+    .btn-resume{
+      display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
+      background:var(--accent);color:#000;font-weight:700;border:none;cursor:pointer;font-size:0.95rem;
+      box-shadow:0 6px 18px rgba(0,229,255,0.08);
+    }
+    .btn-resume:hover{background:var(--accent-2);transform:translateY(-2px);}
+
+    /* HERO */
+    .hero{
+      min-height:78vh;padding-top:86px;
+      display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;
+      gap:18px;padding-left:20px;padding-right:20px;
+      background:linear-gradient(135deg, rgba(128,0,128,0.25), #0f0f0f 80%);
+    }
+    .hero h1{font-size:3.6rem;line-height:1;letter-spacing:-1px;}
+    .hero p{max-width:900px;color:var(--muted);font-size:1.1rem;}
+
+    /* SECTION WRAPPER */
+    section{padding:84px 8%;}
+    section h2{font-size:2.6rem;text-align:center;margin-bottom:36px;font-weight:800;color:var(--white);}
+
+    /* GRID */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;}
+
+    /* CARD */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,0.03);
+      transition:transform .28s, box-shadow .28s, background .28s;overflow:hidden;
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(0,0,0,0.7);background:rgba(255,255,255,0.04);}
+    .card img{width:100%;height:170px;object-fit:cover;border-radius:12px;margin-bottom:14px;}
+    .card h3{font-size:1.15rem;margin-bottom:8px;}
+    .card .muted{color:var(--muted);font-size:0.98rem;}
+    .card p{color:var(--muted);line-height:1.5;font-size:0.98rem;}
+
+    /* BUTTONS (source / view) */
+    .link-btn{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:999px;background:var(--accent);color:#000;font-weight:700;font-size:0.95rem;transition:transform .15s;}
+    .link-btn:hover{background:var(--accent-2);transform:translateY(-2px);}
+
+    /* EXPERIENCE LIST */
+    .exp-list{display:grid;gap:18px;}
+    .exp-item{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);}
+    .exp-item h4{font-size:1.05rem;margin-bottom:6px;color:var(--accent);}
+    .exp-item .period{color:var(--muted);font-size:0.95rem;margin-bottom:8px;}
+    .exp-item p span{font-weight:bold;color:var(--accent-2);}
+
+    /* CERTIFICATES & ACHIEVEMENTS */
+    .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+    .cert-card img{height:110px;object-fit:contain;border-radius:10px;margin-bottom:10px;}
+
+    /* SKILLS */
+    .skills-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;}
+    .skill-pill{display:flex;align-items:center;gap:10px;background:var(--glass);padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);}
+    .skill-pill img{height:34px;width:34px;object-fit:contain;border-radius:8px;}
+    .skill-pill .t{font-weight:600;color:var(--white);font-size:0.98rem}
+
+    /* CONTACT */
+    .contact-ctn{text-align:center;}
+    .contact-ctn .info{color:var(--muted);margin-bottom:6px;font-size:1.02rem;}
+    .socials{display:flex;gap:18px;justify-content:center;margin-top:18px;}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:12px;background:rgba(255,255,255,0.02);font-size:1.45rem;border:1px solid rgba(255,255,255,0.03);transition:transform .16s,color .16s;}
+    .socials a:hover{transform:translateY(-4px);color:var(--accent);background:rgba(255,255,255,0.03);}
+
+    /* FOOTER */
+    footer{padding:26px;text-align:center;color:#9a9a9a;border-top:1px solid rgba(255,255,255,0.02);margin-top:36px;}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero h1{font-size:2.6rem;}
+      nav{padding:10px 18px;}
+      section{padding:64px 6%;}
+    }
+    @media (max-width:520px){
+      .hero h1{font-size:2.1rem;}
+      .socials a{width:48px;height:48px;font-size:1.1rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="brand"><a href="#home">Shobhit • Portfolio</a></div>
+    <div class="navlinks" role="navigation" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+      <a class="btn-resume" href="https://drive.google.com/file/d/1VEC9hsrdHVGdr6YFta_Hq6xh4m7K3cLW/view" target="_blank" rel="noopener">
+        <i class="fas fa-file-download"></i> Resume
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <header id="home" class="hero" data-aos="fade-up">
+      <h1>Shobhit Raj Dahiya</h1>
+      <p>Final-year B.Tech (ECE) • Aspiring Data Analyst / AI Engineer / Business Analyst — I build data products, dashboards and deploy ML solutions that help teams make decisions.</p>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 data-aos="fade-up">About</h2>
+      <div class="card" data-aos="fade-up" style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;">
+        <div style="min-width:160px;">
+          <img src="images/about/1.jpg" alt="Shobhit" style="width:160px;height:160px;border-radius:12px;object-fit:cover;">
+        </div>
+        <div style="flex:1;min-width:260px;">
+          <h3>Hi — I'm Shobhit.</h3>
+          <p class="muted">
+            I’m a data-first thinker who enjoys solving business problems using data, analytics and machine learning.
+            As a fresher, I focus on measurable outcomes — clear KPIs, meaningful visualizations and reproducible ML pipelines.
+          </p>
+
+          <ul style="margin-top:12px;color:var(--muted);line-height:1.6;">
+            <li><strong>Target roles:</strong> Data Analyst • AI Engineer • Business Analyst</li>
+            <li><strong>Core strengths:</strong> Python, SQL, Power BI, Data Cleaning, Feature Engineering, Model Deployment</li>
+            <li><strong>Approach:</strong> Business-first problem definition → data exploration → model/prototype → deliverable (dashboard/app)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+<section id="skills">
+  <h2 data-aos="fade-up">Skills</h2>
+
+  <div class="card" data-aos="fade-up">
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <!-- categories -->
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;">
+        <div style="min-width:260px;">
+          <h4 style="margin-bottom:10px;">Programming & Scripting</h4>
+          <div class="skills-row">
+            <div class="skill-pill"><div class="t">Python</div></div>
+            <div class="skill-pill"><div class="t">SQL</div></div>
+            <div class="skill-pill"><div class="t">Pandas / NumPy</div></div>
+          </div>
+        </div>
+
+        <div style="min-width:260px;">
+          <h4 style="margin-bottom:10px;">Visualization & BI</h4>
+          <div class="skills-row">
+            <div class="skill-pill"><div class="t">Power BI</div></div>
+            <div class="skill-pill"><div class="t">Matplotlib</div></div>
+          </div>
+        </div>
+
+        <div style="min-width:260px;">
+          <h4 style="margin-bottom:10px;">Machine Learning & Tools</h4>
+          <div class="skills-row">
+            <div class="skill-pill"><div class="t">ML (Scikit-learn)</div></div>
+            <div class="skill-pill"><div class="t">Feature Engg, Model Tuning</div></div>
+          </div>
+        </div>
+      </div>
+
+      <p style="color:var(--muted);font-size:0.98rem;margin-top:6px;text-align:center;">
+        
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 data-aos="fade-up">Projects</h2>
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="card" data-aos="fade-up" data-tilt>
+          <img src="images/heart.jpeg" alt="Heart Stroke Prediction">
+          <h3>Heart Stroke Risk Prediction</h3>
+          <p class="muted">
+            <strong>Why:</strong> Early identification of high-risk patients to prioritize interventions.<br>
+            <strong>How:</strong> Collected public health dataset → data cleaning & encoding → feature engineering → multiple ML models → tuned via CV & GridSearch → evaluated with accuracy, precision, recall & ROC-AUC.<br>
+            <strong>Result:</strong> Achieved ~88% accuracy. Built Streamlit app for interactive predictions.<br>
+            <strong>Tools:</strong> Python, Pandas, Scikit-learn, Streamlit, GitHub.
+          </p>
+          <a class="link-btn" href="https://github.com/shobhitdahiya/heart_stroke_prediction" target="_blank" rel="noopener">Source Code</a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card" data-aos="fade-up" data-tilt>
+          <img src="images/projects/2.jpeg" alt="Credit Card Dashboard">
+          <h3>Credit Card Transaction & Financial Analysis</h3>
+          <p class="muted">
+            <strong>Why:</strong> Detect anomalous / fraudulent patterns and provide actionable KPIs.<br>
+            <strong>How:</strong> Aggregated KPIs, built interactive Power BI dashboards with drill-downs & conditional formatting. Performed segmentation & clustering analysis.<br>
+            <strong>Result:</strong> Dashboard highlights suspicious behavior and regional trends.<br>
+            <strong>Tools:</strong> Power BI, DAX, Python, SQL.
+          </p>
+          <a class="link-btn" href="https://github.com/shobhitdahiya/Credit-Card-Transaction-Financial-Analysis-Dashboard-Power-BI-" target="_blank" rel="noopener">Source Code</a>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card" data-aos="fade-up" data-tilt>
+          <img src="images/projects/3.jpg" alt="ML Experiments">
+          <h3>Machine Learning Experiments & Model Interpretability</h3>
+          <p class="muted">
+            <strong>Why:</strong> Understand model behavior & ensure trustworthy predictions.<br>
+            <strong>How:</strong> Ran classification & clustering experiments, optimized pipelines, used SHAP for interpretability.<br>
+            <strong>Result:</strong> Improved generalization & created visual artifacts for stakeholders.<br>
+            <strong>Tools:</strong> Python, Scikit-learn, SHAP, Jupyter, GitHub.
+          </p>
+          <a class="link-btn" href="https://github.com/shobhitdahiya" target="_blank" rel="noopener">Source Code</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2 data-aos="fade-up">Experience</h2>
+      <div class="exp-list">
+        <div class="exp-item" data-aos="fade-right" data-tilt>
+          <h4>AI Intern — IBM SkillsBuild</h4>
+          <div class="period">Jul 2025 – Aug 2025</div>
+          <p class="muted">
+            <span>Project:</span> Heart Stroke Risk Prediction<br>
+            <span>Scope:</span> End-to-end AI pipelines, model building & deployment.<br>
+            <span>What I did:</span> Collected & cleaned healthcare datasets, feature engineering (BMI, age, lifestyle), trained Logistic Regression & Random Forest, hyperparameter tuning, cross-validation, evaluation.<br>
+            <span>Impact:</span> Built Streamlit app for interactive predictions, helping stakeholders prioritize high-risk patients. Improved model performance by ~12% over baseline.<br>
+            <span>Skills used:</span> Python, Pandas, Scikit-learn, Streamlit, SHAP, Git.
+          </p>
+        </div>
+
+        <div class="exp-item" data-aos="fade-left" data-tilt>
+          <h4>Data Analyst Intern — EMERTXE</h4>
+          <div class="period">Jul 2024 – Aug 2024</div>
+          <p class="muted">
+            <span>Project:</span> Credit Card Transaction & Financial Analysis Dashboard<br>
+            <span>Scope:</span> Analytics & reporting, anomaly detection.<br>
+            <span>What I did:</span> Cleaned & wrangled transaction datasets, aggregated KPIs, built interactive Power BI dashboards with drill-downs & conditional formatting. Performed segmentation & clustering.<br>
+            <span>Impact:</span> Enabled teams to detect fraudulent patterns, track trends, optimize reporting workflow, and reduce manual effort.<br>
+            <span>Skills used:</span> Power BI, SQL, Python (Pandas), DAX, data visualization & storytelling.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <h2 data-aos="fade-up">Certifications</h2>
+      <div class="cert-grid">
+        <div class="card cert-card" data-aos="zoom-in" data-tilt>
+          <img src="certifications/oracle.png" alt="Oracle Certificate">
+          <h3>Oracle Cloud Infrastructure — Data Science</h3>
+          <p class="muted">Hands-on understanding of OCI services for data & ML.<br>
+            <a class="link-btn" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=13CDA707F21C1DB38F27A8CE9ACC83761C7EA3119294D177FCCB317E7F8AE17A" target="_blank">View</a>
+          </p>
+        </div>
+        <div class="card cert-card" data-aos="zoom-in" data-tilt>
+          <img src="certifications/deloitte.png" alt="Deloitte">
+          <h3>Deloitte — Data Analytics Job Simulation (Forage)</h3>
+          <p class="muted">Practical scenario-based analytics tasks for business problems.<br>
+            <a class="link-btn" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_tYameSfLKohpkPJqY_1751896827045_completion_certificate.pdf" target="_blank">View</a>
+          </p>
+        </div>
+        <div class="card cert-card" data-aos="zoom-in" data-tilt>
+          <img src="certifications/google.jpeg" alt="Google">
+          <h3>Google — Advanced Data Analytics</h3>
+          <p class="muted">
+            <a class="link-btn" href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/DFOL76XOCCK8" target="_blank">View</a>
+          </p>
+        </div>
+        <div class="card cert-card" data-aos="zoom-in" data-tilt>
+          <img src="images/power bi.jpeg" alt="Power BI Certificate">
+          <h3>Microsoft — Power BI Data Analyst</h3>
+          <p class="muted">
+            <a class="link-btn" href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/0O6RZZWH33EG" target="_blank">View</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+      <h2 data-aos="fade-up">Achievements</h2>
+      <div class="grid">
+        <div class="card" data-aos="flip-up" data-tilt>
+          <img src="images/achievements/IBM.png" alt="IBM Internship Certificate">
+          <h3>IBM AI Internship (2025)</h3>
+          <p class="muted">Completed training & project-based internship on AI pipelines and model deployment.</p>
+        </div>
+        <div class="card" data-aos="flip-up" data-tilt>
+          <img src="images/achievements/nidar.png" alt="ISRO NISAR">
+          <h3>ISRO — NISAR Workshop (2024)</h3>
+          <p class="muted">Attended domain-specific workshop on satellite data & remote sensing applications.</p>
+        </div>
+        <div class="card" data-aos="flip-up" data-tilt>
+          <img src="images/achievements/lidar.png" alt="ISRO LiDAR">
+          <h3>ISRO — LiDAR Data Processing (2024)</h3>
+          <p class="muted">Hands-on on LiDAR processing techniques and geospatial analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 data-aos="fade-up">Contact</h2>
+      <div class="contact-ctn" data-aos="fade-up">
+        <p class="info"><strong>Email:</strong> shobhitwork2024@gmail.com</p>
+        <p class="info"><strong>Phone:</strong> +91 7827458931</p>
+        <p class="info"><strong>Location:</strong> Delhi, India</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/shobhitrajdahiya//" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/shobhitdahiya" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="mailto:shobhitwork2024@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2025 Shobhit Raj Dahiya. All Rights Reserved.</footer>
+
+  <!-- JS AOS & Vanilla-Tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+  <script>
+    AOS.init({duration:800,once:true,easing:"ease-in-out"});
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {max:10,speed:400,scale:1.03,perspective:800});
+  </script>
+
+</body>
+</html>
